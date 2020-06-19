@@ -1,0 +1,61 @@
+" unicode
+scriptencoding utf-8
+set encoding=utf-8
+
+" colors
+syntax enable
+set t_Co=256  " 256 colors
+"colorscheme atom-dark-256
+
+" tabs
+set expandtab       " tabs are spaces
+set softtabstop=4   " number of spaces in tab when editing
+set tabstop=4       " number of visual spaces per TAB
+autocmd FileType make setlocal noexpandtab  " real TABs in makefiles
+
+" searching
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+" ui
+set number              " show line numbers
+set showmatch           " highlight matching [{()}]
+"set cursorline          " highlight current line
+"hi CursorLine term=bold cterm=bold guibg=Grey40
+set showcmd             " show command in bottom bar
+
+" keybindings
+let mapleader="`"       " leader is comma
+
+" word wrapping
+set wrap linebreak nolist
+set tw=79
+set formatoptions=bctloq
+set showbreak=↪\ \ 
+
+" install vim-plug
+" :PlugInstall to install plugins
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" config for vim-plug
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" https://vimawesome.com/plugin/fugitive-vim
+Plug 'tpope/vim-fugitive'
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+
+" Initialize plugin system
+call plug#end()
+
