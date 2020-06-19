@@ -1,10 +1,10 @@
 # Xresources
 # https://wiki.archlinux.org/index.php/X_resources
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+[[ -f ~/.xresources ]] && xrdb -merge -I$HOME ~/.xresources
 
 # Xmodmap
 # https://wiki.archlinux.org/index.php/xmodmap
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+[[ -f ~/.xmodmap ]] && xmodmap ~/.xmodmap
 
 # Cut/paste
 #autocutsel -fork &
