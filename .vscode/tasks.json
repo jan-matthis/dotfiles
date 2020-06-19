@@ -1,0 +1,93 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "tpy-again",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "type": "shell",
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode --reset-window again",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "tpy-black",
+            "type": "shell",
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode --reset-window cmd 'black ${file}'",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "tpy-flake8",
+            "type": "shell",
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode --reset-window cmd 'flake8 ${file}'",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "tpy-isort",
+            "type": "shell",
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode --reset-window cmd 'isort ${file} --verbose'",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "tpy-python",
+            "type": "shell",
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode --reset-window cmd 'python -m ipdb -c continue ${file}'",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "tpy-pytest",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode --dry cmd 'cd ${fileDirname}; pytest '${file}' --pdb --pdbcls=IPython.terminal.debugger:Pdb --plots -s '",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "tpy-execute",
+            "type": "shell",
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode cmd '${file}'",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "tpy-bash",
+            "type": "shell",
+            "command": "tpy --socket-path /tmp/tpy --session-name vscode cmd 'bash ${file}'",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+    ]
+}

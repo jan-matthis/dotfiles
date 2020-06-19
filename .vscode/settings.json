@@ -1,0 +1,56 @@
+{
+    "window.zoomLevel": 1,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.colorTheme": "Quiet Light",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.formatting.provider": "black",
+    "workbench.tree.indent": 30,
+    "problems.decorations.enabled": false,
+    "remote.SSH.showLoginTerminal": true,
+    "editor.fontSize": 16,
+    "python.analysis.symbolsHierarchyDepthLimit": 1,
+    "terminal.integrated.fontSize": 16,
+    "git.rebaseWhenSync": true,
+    "git.confirmSync": false,
+    "remote.SSH.path": "/usr/bin/ssh",
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.explorerKind": "external",
+    "editor.minimap.enabled": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "svg.preview.autoOpen": true,
+    "editor.wordWrapColumn": 88,
+    "editor.wordWrap": "bounded",
+    "python.dataScience.themeMatplotlibPlots": true,
+    "python.dataScience.sendSelectionToInteractiveWindow": false,
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.makeRoom",
+            "sequence": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.action.toggleActivityBarVisibility"
+            ]
+        }
+    ],
+    "workbench.activityBar.visible": true,
+    "editor.rulers": [
+        88
+    ],
+    "autoDocstring.customTemplatePath": "~/.vscode/autodocstring/google_without_types.mustache",
+    "triggerTaskOnSave.tasks": {
+        "test": [
+            "*.py"
+        ],
+    },
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.highlights.enabled": false,
+    "workbench.statusBar.visible": false,
+    "breadcrumbs.enabled": false,
+    "terminal.integrated.macOptionClickForcesSelection": true,
+    "latex-workshop.latex.autoBuild.run": "never"
+}
