@@ -16,7 +16,7 @@ cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} dirname {} | a
 cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
 
 cfg checkout
-cfg cfg --local status.showUntrackedFiles no
+cfg config --local status.showUntrackedFiles no
 ```
 
 ## Usage
