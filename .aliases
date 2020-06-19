@@ -1,0 +1,40 @@
+# Essentials
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg='config'
+
+
+# Disk space
+alias ducks='du -cksh -- * | sort -rn | head'
+
+
+# Git
+alias g='git'
+alias gs="git status"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gch="git rev-parse HEAD"
+
+
+# Editors
+alias vi='vim'
+alias vscode="/Applications/Visual\\ Studio\\ Code.app/contents/Resources/app/bin/code --user-data-dir $HOME/.vscode"
+
+
+# Python
+alias py="python"
+alias pydb='python -m pdb -c continue '
+alias pydev='pip install black flake8 isort pytest rich'
+
+
+# Julia
+alias ju="julia --project=@."
+
+
+# Skim
+alias skim="/Applications/Skim.app/Contents/MacOS/Skim"
+
+
+# Ansible
+alias an="ansible"
+alias ap="ansible-playbook"
+alias ai="ansible-inventory"

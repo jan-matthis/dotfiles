@@ -1,0 +1,6 @@
+import os
+
+alias ipy from IPython import embed; embed()
+alias kk os.system('kill -9 %d' % os.getpid())
+alias ltb import sys; tb=sys.last_traceback; import traceback; traceback.print_tb(tb) 
+alias rtb import sys; tb=sys.last_traceback; from rich import print; from rich.traceback import Traceback; print(Traceback.from_exception(exc_type=sys.last_type, exc_value=sys.last_value, traceback=sys.last_traceback))

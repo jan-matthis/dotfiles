@@ -1,0 +1,25 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Jan-Matthis
+	email = mail@jan-matthis.de
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[alias]
+	la = log --all --graph --oneline --decorate
+	pr = pull --rebase
+	unmerge = reset --merge HEAD~1
+	tree = log --oneline --graph --decorate --all
+
+[branch]
+	autosetuprebase = always
+
+[core]
+	excludesfile = /Users/jm/.gitignore_global
+
+[filter "nbstripout"]
+	extrakeys = \n  metadata.celltoolbar metadata.kernel_spec.display_name\n  metadata.kernel_spec.name metadata.language_info.codemirror_mode.version\n  metadata.language_info.pygments_lexer metadata.language_info.version\n  metadata.toc metadata.notify_time metadata.varInspector\n  cell.metadata.heading_collapsed cell.metadata.hidden\n  cell.metadata.code_folding cell.metadata.tags cell.metadata.init_cell

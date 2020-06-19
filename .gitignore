@@ -1,0 +1,6 @@
+# To use as global gitignore:
+# git config --global core.excludesfile '$HOME/.gitignore'
+*~
+.DS_Store
+.autoenv.zsh
+*.code-workspace
