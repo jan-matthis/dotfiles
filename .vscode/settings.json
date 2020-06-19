@@ -41,7 +41,7 @@
     "editor.rulers": [
         88
     ],
-    "autoDocstring.customTemplatePath": "~/.vscode/autodocstring/google_without_types.mustache",
+    "autoDocstring.customTemplatePath": "${env:HOME}/.vscode/autodocstring/google_without_types.mustache",
     "triggerTaskOnSave.tasks": {
         "test": [
             "*.py"
