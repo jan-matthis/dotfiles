@@ -13,6 +13,7 @@ alias gs="git status"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gch="git rev-parse HEAD"
+alias gnow="GIT_COMMITTER_DATE='`date`' git commit --amend --date '`date`'"
 
 
 # Editors
