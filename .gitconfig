@@ -14,6 +14,7 @@
 	pr = pull --rebase
 	unmerge = reset --merge HEAD~1
 	tree = log --oneline --graph --decorate --all
+	pushf = push --force-with-lease
 
 [branch]
 	autosetuprebase = always
