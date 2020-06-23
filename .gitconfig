@@ -12,15 +12,18 @@
 [alias]
 	la = log --all --graph --oneline --decorate
 	pr = pull --rebase
-	unmerge = reset --merge HEAD~1
+	pushfl = push --force-with-lease
 	tree = log --oneline --graph --decorate --all
-	pushf = push --force-with-lease
+	unmerge = reset --merge HEAD~1
 
 [branch]
 	autosetuprebase = always
 
 [core]
-	excludesfile = /Users/jm/.gitignore_global
+	excludesfile = /Users/jm/.gitignore
 
 [filter "nbstripout"]
 	extrakeys = \n  metadata.celltoolbar metadata.kernel_spec.display_name\n  metadata.kernel_spec.name metadata.language_info.codemirror_mode.version\n  metadata.language_info.pygments_lexer metadata.language_info.version\n  metadata.toc metadata.notify_time metadata.varInspector\n  cell.metadata.heading_collapsed cell.metadata.hidden\n  cell.metadata.code_folding cell.metadata.tags cell.metadata.init_cell
+
+[pull]
+	rebase = preserve
