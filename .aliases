@@ -18,7 +18,7 @@ alias gnow="GIT_COMMITTER_DATE='`date`' git commit --amend --date '`date`'"
 
 # Editors
 alias vi='vim'
-alias vscode="/Applications/Visual\\ Studio\\ Code.app/contents/Resources/app/bin/code --user-data-dir $HOME/.vscode"
+alias vscode="/Applications/Visual\\ Studio\\ Code.app/contents/Resources/app/bin/code"
 
 
 # Python
@@ -43,5 +43,5 @@ alias ai="ansible-inventory"
 
 # Papers
 alias pia="papers-import --path ~/Papers arxiv"
+alias pew="papers-export --path ~/Papers web"
 alias pipdf="papers-import --path ~/Papers pdf"
-alias peweb="papers-export --path ~/Papers web"

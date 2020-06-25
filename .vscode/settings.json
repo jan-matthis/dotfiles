@@ -1,56 +1,97 @@
 {
+    //
+    // General
+    //
+    // Window
     "window.zoomLevel": 1,
-    "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "workbench.colorTheme": "Quiet Light",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
-    },
-    "python.formatting.provider": "black",
+    // Workbench
     "workbench.tree.indent": 30,
-    "problems.decorations.enabled": false,
-    "remote.SSH.showLoginTerminal": true,
-    "editor.fontSize": 16,
-    "python.analysis.symbolsHierarchyDepthLimit": 1,
-    "terminal.integrated.fontSize": 16,
-    "git.rebaseWhenSync": true,
-    "git.confirmSync": false,
-    "remote.SSH.path": "/usr/bin/ssh",
     "workbench.startupEditor": "newUntitledFile",
-    "terminal.explorerKind": "external",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "workbench.colorTheme": "Quiet Light",
+    // Editor
+    "editor.fontSize": 16,
     "editor.minimap.enabled": false,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "svg.preview.autoOpen": true,
     "editor.wordWrapColumn": 88,
     "editor.wordWrap": "bounded",
-    "python.dataScience.themeMatplotlibPlots": true,
-    "python.dataScience.sendSelectionToInteractiveWindow": false,
-    "multiCommand.commands": [
-        {
-            "command": "multiCommand.makeRoom",
-            "sequence": [
-                "workbench.action.toggleSidebarVisibility",
-                "workbench.action.toggleActivityBarVisibility"
-            ]
-        }
-    ],
-    "workbench.activityBar.visible": true,
     "editor.rulers": [
         88
     ],
-    "autoDocstring.customTemplatePath": "${env:HOME}/.vscode/autodocstring/google_without_types.mustache",
-    "triggerTaskOnSave.tasks": {
-        "test": [
-            "*.py"
-        ],
-    },
-    "todo-tree.tree.showScanModeButton": false,
-    "todo-tree.highlights.enabled": false,
-    "workbench.statusBar.visible": false,
-    "breadcrumbs.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    // Terminal
+    "terminal.integrated.fontSize": 16,
+    "terminal.explorerKind": "external",
+    "terminal.integrated.inheritEnv": false,
     "terminal.integrated.macOptionClickForcesSelection": true,
-    "latex-workshop.latex.autoBuild.run": "never"
+    // Breadcrumbs
+    "breadcrumbs.enabled": false,
+    // SSH
+    "remote.SSH.path": "/usr/bin/ssh",
+    "remote.SSH.showLoginTerminal": true,
+    // Git
+    "git.rebaseWhenSync": true,
+    "git.confirmSync": false,
+    // Project manager
+    "projectManager.git.baseFolders": [
+        "/Users/jm/Git/"
+    ],
+    // File to exclude
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.ipynb_checkpoints": true,
+        "**/*.egg-info": true,
+    },
+    // Autodocstring
+    "autoDocstring.customTemplatePath": "${env:HOME}/.vscode/autodocstring/google_without_types.mustache",
+    //
+    // Python
+    //
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.wordWrapColumn": 88,
+    },
+    "python.venvFolders": [
+        "${env:HOME}/opt/anaconda3/envs/"
+    ],
+    "python.analysis.symbolsHierarchyDepthLimit": 1,
+    "python.dataScience.themeMatplotlibPlots": true,
+    "python.dataScience.sendSelectionToInteractiveWindow": false,
+    // Python: Testing
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    // Python: Linting
+    // https://code.visualstudio.com/docs/python/linting#_specific-linters
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "${env:HOME}/opt/anaconda3/bin/flake8",
+    "python.linting.args": [
+        "--settings-path=${workspaceFolder}/setup.cfg"
+    ],
+    // Python: Formatting
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${env:HOME}/opt/anaconda3/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length=88"
+    ],
+    // Python: Sort Imports
+    // https://github.com/microsoft/vscode-python/issues/5840#issuecomment-497321419
+    "python.sortImports.path": "${env:HOME}/opt/anaconda3/bin/isort",
+    "python.sortImports.args": [
+        "--settings-path=${workspaceFolder}/setup.cfg"
+    ],
+    // ETC
+    "atomKeymap.promptV3Features": true,
 }
