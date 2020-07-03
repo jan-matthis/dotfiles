@@ -78,3 +78,11 @@ export ANSIBLE_NOCOWS=1
 # AWS
 export AWS_REGION="us-east-1"
 export AWS_DEFAULT_REGION=$AWS_REGION
+
+
+#
+# Additional variables
+#
+if [ -f "$HOME/.profile_local" ] ; then
+    . $HOME/.profile_local
+fi
