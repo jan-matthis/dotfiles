@@ -82,7 +82,6 @@ export AWS_DEFAULT_REGION=$AWS_REGION
 
 #
 # Additional variables
-#
-if [ -f "$HOME/.profile_local" ] ; then
-    . $HOME/.profile_local
+if [ -f "$HOME/.profile_extra" ] ; then
+    . $HOME/.profile_extra
 fi
