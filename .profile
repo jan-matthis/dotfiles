@@ -85,3 +85,7 @@ export AWS_DEFAULT_REGION=$AWS_REGION
 if [ -f "$HOME/.profile_extra" ] ; then
     . $HOME/.profile_extra
 fi
+# BEGIN ANSIBLE MANAGED BLOCK sbibm.sbibm_env
+# sbibm
+export JULIA_SYSIMAGE_DIFFEQTORCH="$HOME/.julia_sysimage_diffeqtorch.so"
+# END ANSIBLE MANAGED BLOCK sbibm.sbibm_env
