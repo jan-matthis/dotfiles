@@ -1,6 +1,12 @@
-# Essentials
+# Config dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfg='config'
+
+
+# Edit config files
+alias cfg-alacritty="ed $HOME/.config/alacritty/alacritty.yml"
+alias cfg-aliasesc="ed $HOME/.aliases"
+alias cfg-vimc="ed $HOME/.config/vim/vimrc"
 
 
 # Disk space
@@ -17,7 +23,7 @@ alias gnow="GIT_COMMITTER_DATE='`date`' git commit --amend --date '`date`'"
 
 
 # Editors
-alias vi='vim'
+alias ed="$EDITOR"
 alias vscode="/Applications/Visual\\ Studio\\ Code.app/contents/Resources/app/bin/code"
 
 
