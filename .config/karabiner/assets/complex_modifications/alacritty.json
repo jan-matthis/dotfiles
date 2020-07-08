@@ -1,13 +1,13 @@
 {
-  "title": "Swap Left Control/Command only in Alacritty",
+  "title": "Alacritty",
   "rules": [
     {
-      "description": "Left Command to Control (alacritty)",
+      "description": "Alacritty: Left Command to Left Control",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "left_command"
+            "key_code": "left_command",
           },
           "to": [
             {
@@ -26,17 +26,76 @@
       ]
     },
     {
-      "description": "Left Control to Command (alacritty)",
+      "description": "Alacritty: Left Control+Tab to Left Command+Tab",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "left_control"
+            "key_code": "tab",
+            "modifiers": {
+                "mandatory": ["left_control"]
+            }
           },
           "to": [
+              {
+                "key_code": "tab",
+                "modifiers": ["left_command"]
+              }
+          ],
+          "conditions": [
             {
-              "key_code": "left_command"
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^io.alacritty"
+              ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Alacritty: Left Control+Spacebar to Left Command+Spacebar",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+                "mandatory": ["left_control"]
+            }
+          },
+          "to": [
+              {
+                "key_code": "spacebar",
+                "modifiers": ["left_command"]
+              }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^io.alacritty"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Alacritty: Left Control+Spacebar to Open Alfred",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+                "mandatory": ["left_control"]
+            }
+          },
+          "to": [
+              {
+                "shell_command": "open -a 'Alfred 4.app'"
+              }
           ],
           "conditions": [
             {
