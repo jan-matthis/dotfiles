@@ -13,6 +13,13 @@ set softtabstop=4   " number of spaces in tab when editing
 set tabstop=4       " number of visual spaces per TAB
 autocmd FileType make setlocal noexpandtab  " real TABs in makefiles
 
+" mousemode
+set mouse=a
+
+" colon/semicolon
+nmap ; :
+noremap ;; ;
+
 " searching
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
@@ -29,6 +36,7 @@ set showcmd             " show command in bottom bar
 
 " keybindings
 let mapleader="`"       " leader is comma
+noremap <D-s> :update<CR>
 
 " word wrapping
 set wrap linebreak nolist
