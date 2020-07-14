@@ -5,8 +5,9 @@ alias cfg='config'
 
 # Edit config files
 alias cfg-alacritty="ed $HOME/.config/alacritty/alacritty.yml"
-alias cfg-aliasesc="ed $HOME/.aliases"
-alias cfg-vimc="ed $HOME/.config/vim/vimrc"
+alias cfg-aliases="ed $HOME/.aliases"
+alias cfg-tmux="ed $HOME/.tmux.conf"
+alias cfg-vim="ed $HOME/.config/vim/vimrc"
 
 
 # Disk space
@@ -15,12 +16,14 @@ alias ducks='du -cksh -- * | sort -rn | head'
 
 # Git
 alias g='git'
-alias gs="git status"
-alias gd="git diff"
-alias gds="git diff --staged"
-alias gch="git rev-parse HEAD"
-alias gnow="GIT_COMMITTER_DATE='`date`' git commit --amend --date '`date`'"
-
+alias gita='git add'
+alias gitc="git commit"
+alias gitcm="git commit -m"
+alias gitd="git diff"
+alias gitds="git diff --staged"
+alias gitnow="GIT_COMMITTER_DATE='`date`' git commit --amend --date '`date`'"
+alias gitp="git push"
+alias gits="git status"
 
 # Editors
 alias ed="$EDITOR"
@@ -42,12 +45,16 @@ alias skim="/Applications/Skim.app/Contents/MacOS/Skim"
 
 
 # Ansible
-alias an="ansible"
-alias ap="ansible-playbook"
-alias ai="ansible-inventory"
+alias an="$CONDA/bin/ansible"
+alias ap="$CONDA/bin/ansible-playbook"
+alias ai="$CONDA/bin/ansible-inventory"
 
 
 # Papers
-alias pia="papers-import --path ~/Papers arxiv"
-alias pew="papers-export --path ~/Papers web"
-alias pipdf="papers-import --path ~/Papers pdf"
+alias pia="$CONDA/bin/papers-import --path $HOME/Papers arxiv"
+alias pew="$CONDA/bin/papers-export --path $HOME/Papers web"
+alias pipdf="$CONDA/bin/papers-import --path $HOME/Papers pdf"
+
+
+# fabrq
+alias fabrq="$CONDA/bin/fabrq"
