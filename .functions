@@ -1,6 +1,11 @@
 # SSH with zsh
 z() {
-    ssh $@ -t "zsh --login; echo $@"
+    if [ "$#" -eq 1 ]; then
+        ssh $@ -t "zsh --login; echo $@"
+    fi
+    if [ "$#" -eq 2 ]; then
+        sshpass -p $2 ssh $1 -t "zsh --login; echo $1"
+    fi
 }
 
 
@@ -35,3 +40,12 @@ wet() {
     fi
 }
 alias sun=wet
+
+
+# VI
+vi() {
+    if type vim >/dev/null
+    then  vim "$@"
+    else  vi "$@"
+    fi
+}
