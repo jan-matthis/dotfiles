@@ -5,7 +5,13 @@ set encoding=utf-8
 " colors
 syntax enable
 set t_Co=256  " 256 colors
-"colorscheme atom-dark-256
+
+" line numbers
+hi LineNr ctermfg=DarkGray
+
+" dividers
+set fillchars=stl:^,stlnc:=,vert:\ ,fold:-,diff:-
+hi VertSplit guibg=Orange guifg=Black ctermbg=6 ctermfg=0
 
 " tabs
 set expandtab       " tabs are spaces
@@ -15,6 +21,9 @@ autocmd FileType make setlocal noexpandtab  " real TABs in makefiles
 
 " mousemode
 set mouse=a
+
+" clipboard
+set clipboard^=unnamed,unnamedplus
 
 " colon/semicolon
 nmap ; :
@@ -61,8 +70,12 @@ call plug#begin('~/.vim/plugged')
 " https://vimawesome.com/plugin/fugitive-vim
 Plug 'tpope/vim-fugitive'
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
+
+" https://github.com/preservim/nerdtree
+Plug 'preservim/nerdtree'
+map <C-\> :NERDTreeToggle<CR>
 
 " Initialize plugin system
 call plug#end()
