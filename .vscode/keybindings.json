@@ -1,5 +1,16 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+    //
+    // Saving
+    //
+    {
+        "key": "cmd+s",
+        "command": "multiCommand.sortImportsWhenPythonAndSave",
+        "when": "resourceLangId == 'python'"
+    }
+    //
+    // REPL
+    //
     {
         "key": "cmd+enter",
         "command": "-editor.action.insertLineAfter",
@@ -49,13 +60,13 @@
         "command": "python.datascience.execSelectionInteractive",
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
     },
-    
+
     // Hide sidebar completely
     //{
     //    "key": "cmd+\\",
     //    "command": "multiCommand.makeRoom"
     //},
-    
+
     // Python REPL
     {
         "key": "cmd+enter",
