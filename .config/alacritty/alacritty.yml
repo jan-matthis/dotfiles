@@ -1,23 +1,24 @@
 window:
-  startup_mode: SimpleFullscreen
+  startup_mode: Fullscreen
+  #startup_mode: SimpleFullscreen
   padding:
     x: 10
     y: 10
   decorations: full 
 
 font:
-  size: 20
+  size: 22
   
   normal:
-    family: Meslo LG S for Powerline
-    style: Regular
+    family: JetBrains Mono
+    style: Semi Light
 
   bold:
-    family: Meslo LG S for Powerline
-    style: Regular  #Bold
+    family: JetBrains Mono 
+    style: Bold
 
   italic:
-    family: Meslo LG S for Powerline
+    family: JetBrains Mono 
     style: Italic
 
 draw_bold_text_with_bright_colors: true
