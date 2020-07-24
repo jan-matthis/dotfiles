@@ -1,0 +1,24 @@
+{
+  "title": "tpy",
+  "rules": [
+    {
+      "description": "Right shift to tpy again pressed alone",
+      "manipulators": [
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "right_shift",
+                "modifiers": {
+                    "optional": ["any"]
+                }
+            },
+            "to_if_alone": [
+                {
+                    "shell_command": "/Users/jm/opt/anaconda3/bin/tpy --session-name main again"
+                }
+            ]
+        }
+      ]
+    }
+  ]
+}
