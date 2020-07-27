@@ -17,6 +17,7 @@ md() {
     ymd=$(date +"%Y-%m-%d")
     outputFile="${outputDir}/${ymd} ${title}.md"
     curl --progress-bar --data-urlencode "u=${url}" --data "read=1&md=1" http://heckyesmarkdown.com/go/ -o $outputFile
+    cat $outputFile 
 }
 
 # Website to pdf, uses wkhtmltopdf
