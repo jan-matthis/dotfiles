@@ -72,6 +72,12 @@ export CLICOLOR=1  # Colorful ls
 export PYTHONSTARTUP="$HOME/.pythonrc"
 #export MPLBACKEND="agg"
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+if [ -f "$NVM_DIR/nvm.sh" ] ; then
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fi
+
 # Ansible
 export ANSIBLE_NOCOWS=1
 
