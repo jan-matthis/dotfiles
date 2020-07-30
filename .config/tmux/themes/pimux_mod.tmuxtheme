@@ -57,7 +57,7 @@ set -g status-interval 0
 
 # Status contents
 set -g status-left ''
-set -g status-right '#{?client_prefix,...,} #S:#I.#P'
+set -g status-right '#{?client_prefix,...,} #S:#I.#P@#h'
 
 # Message
 set -g message-style fg=$HIGHLIGHT,bg=$BACKGROUND,bright

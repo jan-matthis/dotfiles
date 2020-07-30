@@ -1,10 +1,24 @@
-# SSH with zsh
-z() {
+# SSH and zsh
+ssh-zsh() {
     if [ "$#" -eq 1 ]; then
         ssh $@ -t "zsh --login; echo $@"
     fi
     if [ "$#" -eq 2 ]; then
         sshpass -p $2 ssh $1 -t "zsh --login; echo $1"
+    fi
+}
+
+
+# SSH and tmux
+ssh-tmux() {
+    if [ "$#" -eq 0 ]; then
+        tmux new -A -s main
+    fi
+    if [ "$#" -eq 1 ]; then
+        ssh $@ -t "tmux new -s main || tmux attach -t main; echo $@"
+    fi
+    if [ "$#" -eq 2 ]; then
+        sshpass -p $2 ssh $1 -t "tmux new -s main || tmux attach -t main; echo $1"
     fi
 }
 
@@ -17,7 +31,7 @@ md() {
     ymd=$(date +"%Y-%m-%d")
     outputFile="${outputDir}/${ymd} ${title}.md"
     curl --progress-bar --data-urlencode "u=${url}" --data "read=1&md=1" http://heckyesmarkdown.com/go/ -o $outputFile
-    cat $outputFile 
+    cat $outputFile
 }
 
 # Website to pdf, uses wkhtmltopdf

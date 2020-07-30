@@ -6,8 +6,17 @@ alias cfg='config'
 # Edit config files
 alias cfg-alacritty="ed $HOME/.config/alacritty/alacritty.yml"
 alias cfg-aliases="ed $HOME/.aliases"
-alias cfg-tmux="ed $HOME/.tmux.conf"
+alias cfg-tmux="ed $HOME/.config/tmux/tmux.conf"
 alias cfg-vim="ed $HOME/.config/vim/vimrc"
+
+
+# Functions
+alias z="ssh-zsh"
+alias t="ssh-tmux"
+
+
+# Tmux
+alias tt="tmux new -A -s main"
 
 
 # Disk space
@@ -24,6 +33,7 @@ alias gitds="git diff --staged"
 alias gitnow="GIT_COMMITTER_DATE='`date`' git commit --amend --date '`date`'"
 alias gitp="git push"
 alias gits="git status"
+
 
 # Editors
 alias ed="$EDITOR"

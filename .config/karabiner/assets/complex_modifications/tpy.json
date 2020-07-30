@@ -12,6 +12,11 @@
                     "optional": ["any"]
                 }
             },
+            "to": [
+                {
+                    "key_code": "right_shift"
+                }
+            ],
             "to_if_alone": [
                 {
                     "shell_command": "/Users/jm/opt/anaconda3/bin/tpy --session-name main again"
