@@ -24,7 +24,7 @@ font:
 draw_bold_text_with_bright_colors: true
 
 cursor:
-  style: Block
+  style: Underline
 
 # Colors (lovelace)
 colors:
@@ -58,6 +58,7 @@ colors:
 
 key_bindings:
   - { key: Comma,    mods: Control,       command: {program: "vi", args: ["$HOME/.config/alacritty/alacritty.yml"]} }
+  - { key: 1,        mods: Control|Shift, command: {program: "/usr/local/bin/tmux", args: ["new -A -s main"]} }
   - { key: N,        mods: Control,       action: SpawnNewInstance       }
   - { key: Left,     mods: Control,       chars: "\x1bb"                       } # one word left
   - { key: Right,    mods: Control,       chars: "\x1bf"                       } # one word right
@@ -86,11 +87,24 @@ key_bindings:
   - { key: Down,        mods: Alt|Shift,       chars: "\x1B\x1B[B"      }
   - { key: Up,          mods: Alt,             chars: "\x1B\x1B[A"      }
   - { key: Up,          mods: Alt|Shift,       chars: "\x1B\x1B[A"      }
+  - { key: Key0, mods: Alt, chars: "\x1b0" }
+  - { key: Key1, mods: Alt, chars: "\x1b1" }
+  - { key: Key2, mods: Alt, chars: "\x1b2" }
+  - { key: Key3, mods: Alt, chars: "\x1b3" }
+  - { key: Key4, mods: Alt, chars: "\x1b4" }
+  - { key: Key5, mods: Alt, chars: "\x1b5" }
+  - { key: Key6, mods: Alt, chars: "\x1b6" }
+  - { key: Key7, mods: Alt, chars: "\x1b7" }
+  - { key: Key8, mods: Alt, chars: "\x1b8" }
+  - { key: Key9, mods: Alt, chars: "\x1b9" }
 
 mouse:
   hide_when_typing: true
   url:
     launcher: open
+
+selection:
+  save_to_clipboard: true
 
 #shell:
 #    program: /usr/local/bin/zsh

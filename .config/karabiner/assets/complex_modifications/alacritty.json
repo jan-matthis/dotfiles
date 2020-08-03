@@ -201,6 +201,39 @@
       ]
     },
     {
+      "description": "Alacritty: Left Control + Shift + 1 to Ctrl + b + 1",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "1",
+              "modifiers": {
+                  "mandatory": ["left_control", "shift"]
+              }
+          },
+          "to": [
+            {
+              "key_code": "b",
+              "modifiers": {
+                  "mandatory": ["left_control"]
+              }
+            },
+            {
+              "key_code": "1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^io.alacritty"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Alacritty: Left Control + 2 to Backtick + 2",
       "manipulators": [
         {
