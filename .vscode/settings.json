@@ -9,7 +9,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Shades of Purple",
+    "workbench.colorTheme": "Quiet Light",
     // Editor
     "editor.fontSize": 16,
     "editor.minimap.enabled": false,
@@ -100,7 +100,7 @@
         {
             "command": "multiCommand.sortImportsWhenPythonAndSave",
             "sequence": [
-                "python.sortImports",
+                //"python.sortImports",
                 "editor.action.formatDocument",
                 "workbench.action.files.save",
             ]
