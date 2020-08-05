@@ -29,14 +29,11 @@ set -g clock-mode-style 24
 set -g mode-style bg=$HIGHLIGHT,fg=$BACKGROUND
 
 # Windows
-
 setw -g window-status-format "#I "
 setw -g window-status-style bg=default,fg=$FOREGROUND,dim
 setw -g window-status-last-style fg=$FOREGROUND,dim  # Could be another color
-
 setw -g window-status-current-format "#I:#W "
 setw -g window-status-current-style bg=default,fg=$FOREGROUND,dim
-
 setw -g window-status-activity-style bg=$BACKGROUND,fg=$ACTIVITY,dim
 
 # Base index ( start counting from 1 )
