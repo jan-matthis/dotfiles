@@ -33,7 +33,7 @@ setw -g window-status-format "#I "
 setw -g window-status-style bg=default,fg=$FOREGROUND,dim
 setw -g window-status-last-style fg=$FOREGROUND,dim  # Could be another color
 setw -g window-status-current-format "#I:#W "
-setw -g window-status-current-style bg=default,fg=$FOREGROUND,dim
+setw -g window-status-current-style bg=default,fg=white,bright
 setw -g window-status-activity-style bg=$BACKGROUND,fg=$ACTIVITY,dim
 
 # Base index ( start counting from 1 )
@@ -57,6 +57,6 @@ set -g status-left ''
 set -g status-right '#{?client_prefix,...,} #S:#I.#P · #h · %H:%M'
 
 # Message
-set -g message-style fg=$HIGHLIGHT,bg=$BACKGROUND,bright
+set -g message-style bg=$BACKGROUND,fg=$FOREGROUND,dim,bold
 
 # vim: set syntax=tmux:

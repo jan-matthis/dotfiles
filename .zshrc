@@ -156,3 +156,9 @@ bashcompinit
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/573
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
+
+# TMUX
+#if ! { [ -n "$TMUX" ]; } then
+#    tmux -L C_b -f $HOME/.config/tmux/prefix_C-b.conf new -A -s outer
+#fi
