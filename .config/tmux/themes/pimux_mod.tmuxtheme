@@ -8,16 +8,17 @@ BACKGROUND=default
 FOREGROUND=white
 HIGHLIGHT="#ffffff"
 ACTIVITY="#a0d0f0"
+PANE_BORDER="#cccccc"
 
 # Title
 set -g set-titles on
 set -g set-titles-string '#(whoami)@#H - (#S:#W.#P)'
 
 # Panes
-set -g pane-border-style fg=default
-set -g pane-active-border-style fg=$HIGHLIGHT,bg=default
+set -g pane-border-style fg=$PANE_BORDER,bg=default
+set -g pane-active-border-style fg=$PANE_BORDER,bg=default
 
-set -g display-panes-time 1000
+set -g display-panes-time 1500
 set -g display-panes-colour $FOREGROUND
 set -g display-panes-active-colour $HIGHLIGHT
 
