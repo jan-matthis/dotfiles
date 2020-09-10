@@ -5,7 +5,8 @@ set encoding=utf-8
 " colors
 syntax enable
 "set t_Co=256  " 256 colors
-exec "source " . expand('<sfile>:p:h') . "/colors/dim.vim"
+exec "source " . expand('<sfile>:p:h') . "/colors/default-light.vim"
+hi LineNr ctermfg=DarkGray
 
 " tabs
 set expandtab       " tabs are spaces
