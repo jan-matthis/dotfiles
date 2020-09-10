@@ -6,7 +6,7 @@ alias cfg='config'
 # Edit config files
 alias cfg-alacritty="ed $HOME/.config/alacritty/alacritty.yml"
 alias cfg-aliases="ed $HOME/.aliases"
-alias cfg-tmux="ed $HOME/.config/tmux/tmux.conf"
+alias cfg-tmux="ed $HOME/.config/tmux/base.conf"
 alias cfg-vim="ed $HOME/.config/vim/vimrc"
 
 
