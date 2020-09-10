@@ -26,7 +26,6 @@ draw_bold_text_with_bright_colors: false
 cursor:
   style: Underline
 
-# Colors (lovelace)
 colors:
   # Default Colors
   primary:
@@ -134,15 +133,4 @@ selection:
   save_to_clipboard: true
 
 shell:
-    program: /usr/local/bin/tmux
-    args:
-     - -L
-     - outer
-     - -f
-     - /Users/jm/.config/tmux/prefix_C-b.conf
-     - new
-     - -A
-     - -s
-     - outer
-     - -n
-     - local
+    program: /Users/jm/.config/alacritty/startup.sh
