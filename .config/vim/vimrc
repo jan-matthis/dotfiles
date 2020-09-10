@@ -4,6 +4,7 @@ set encoding=utf-8
 
 " colors
 syntax enable
+"set termguicolors
 "set t_Co=256  " 256 colors
 exec "source " . expand('<sfile>:p:h') . "/colors/default-light.vim"
 hi LineNr ctermfg=DarkGray
@@ -16,6 +17,10 @@ autocmd FileType make setlocal noexpandtab  " real TABs in makefiles
 
 " mousemode
 set mouse=a
+
+" scrolling
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 
 " clipboard
 set clipboard^=unnamed,unnamedplus
