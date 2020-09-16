@@ -6,8 +6,12 @@ window:
     y: 10
   decorations: full
 
+scrolling:
+  history: 100000
+  multiplier: 1
+
 font:
-  size: 24 
+  size: 24
 
   normal:
     family: JetBrains Mono
@@ -21,108 +25,98 @@ font:
     family: JetBrains Mono
     style: Italic
 
+  offset:
+    x: 0
+    y: 4
+
 draw_bold_text_with_bright_colors: false
 
 cursor:
-  style: Underline
+  style: Block
 
+# Colors (lovelace)
 colors:
+  # COLORSCHEME: light_quiet_mod.yaml
   # Default Colors
   primary:
-    background: '#f1f1f1'
-    foreground: '#424242'
-  # Normal colors
+    background: '#f5f5f5'
+    foreground: '#333333'
+  # Normal colors 
   normal:
-    black: '#212121'
-    red: '#c30771'
-    green: '#10a778'
-    yellow: '#a89c14'
-    blue: '#008ec4'
-    magenta: '#523c79'
-    cyan: '#20a5ba'
-    white: '#e0e0e0'
+  # Bright colors
+    black: '#333333'    # 0
+    red: '#aa3731'      # 1
+    green: '#448c27'    # 2
+    yellow: '#cd9731'   # 3
+    blue: '#4b69c6'     # 4
+    magenta: '#a342bd'  # 5
+    cyan: '#4ec1e5'     # 6
+    white: '#aaaaaa'    # 7
   # Bright colors
   bright:
-    black: '#212121'
-    red: '#fb007a'
-    green: '#5fd7af'
-    yellow: '#f3e430'
-    blue: '#20bbfc'
-    magenta: '#6855de'
-    cyan: '#4fb8cc'
-    white: '#f1f1f1'
+    black: '#888888'    # 8
+    red: '#e84b43'      # 9
+    green: '#41a946'    # 10
+    yellow: '#eab700'   # 11
+    blue: '#3279f1'     # 12
+    magenta: '#d340fa'  # 13
+    cyan: '#2cccff'     # 14
+    white: '#feffff'    # 15
+  cursor:
+    text: '#1E1E3F'
+    cursor: '#FAD000'
 
+    # Normal colors
+  selection:
+    background: '#c1deff'
+    text: '#000000'
+  indexed_colors: []
 key_bindings:
-  - {
-      key: Comma,
-      mods: Control,
-      command:
-        {
-          program: "vi",
-          args: [ "$HOME/.config/alacritty/alacritty.yml" ]
-        }
-    }
-  - {
-      key: 1,
-      mods: Control|Shift,
-      command:
-        {
-          program: "/usr/local/bin/tmux",
-          args: [ "new -A -s main" ]
-        }
-    }
-  - { key: N, mods: Control, action: SpawnNewInstance }
-  - { key: Left, mods: Control, chars: "\eb" }
+  - {key: Comma, mods: Control, command: {program: vi, args: [$HOME/.config/alacritty/alacritty.yml]}}
+  - {key: 1, mods: Control|Shift, command: {program: /usr/local/bin/tmux, args: [
+        new -A -s main]}}
+  - {key: N, mods: Control, action: SpawnNewInstance}
+  - {key: Left, mods: Control, chars: "\eb"}
   # one word left
-  - { key: Right, mods: Control, chars: "\ef" }
+  - {key: Right, mods: Control, chars: "\ef"}
   # one word right
-  - {
-      key: Left,
-      mods: Control,
-      chars: "\eOH",
-      mode: AppCursor
-    }
+  - {key: Left, mods: Control, chars: "\eOH", mode: AppCursor}
   # home
-  - {
-      key: Right,
-      mods: Control,
-      chars: "\eOF",
-      mode: AppCursor
-    }
+  - {key: Right, mods: Control, chars: "\eOF", mode: AppCursor}
   # end
-  - { key: Up, mods: Control, chars: "\e[1;5A" }
-  - { key: Down, mods: Control, chars: "\e[1;5B" }
-  - { key: 28, mods: Control, chars: "{" }
-  - { key: 25, mods: Control, chars: "}" }
-  - { key: 37, mods: Control, chars: "@" }
-  - { key: 26, mods: Control|Shift, chars: "\\" }
-  - { key: 26, mods: Control, chars: "|" }
-  - { key: 45, mods: Control, chars: "~" }
-  - { key: 23, mods: Control, chars: "[" }
-  - { key: 22, mods: Control, chars: "]" }
-  - { key: F, mods: Control, action: ToggleSimpleFullscreen }
-  - { key: Equals, mods: Control, action: IncreaseFontSize }
-  - { key: Minus, mods: Control, action: DecreaseFontSize }
-  - { key: V, mods: Control, action: Paste }
+  - {key: Up, mods: Control, chars: "\e[1;5A"}
+  - {key: Down, mods: Control, chars: "\e[1;5B"}
+  - {key: 28, mods: Control, chars: '{'}
+  - {key: 25, mods: Control, chars: '}'}
+  - {key: 37, mods: Control, chars: '@'}
+  - {key: 26, mods: Control|Shift, chars: \}
+  - {key: 26, mods: Control, chars: '|'}
+  - {key: 45, mods: Control, chars: '~'}
+  - {key: 23, mods: Control, chars: '['}
+  - {key: 22, mods: Control, chars: ']'}
+  - {key: F, mods: Control, action: ToggleSimpleFullscreen}
+  - {key: Equals, mods: Control, action: IncreaseFontSize}
+  - {key: Minus, mods: Control, action: DecreaseFontSize}
+  - {key: V, mods: Control, action: Paste}
   #- { key: C,      mods: Control,            action: Copy             }
-  - { key: Left, mods: Alt, chars: "\eb" }
-  - { key: Left, mods: Alt|Shift, chars: "\e\e[D" }
-  - { key: Right, mods: Alt, chars: "\ef" }
-  - { key: Right, mods: Alt|Shift, chars: "\e\e[C" }
-  - { key: Down, mods: Alt, chars: "\e\e[B" }
-  - { key: Down, mods: Alt|Shift, chars: "\e\e[B" }
-  - { key: Up, mods: Alt, chars: "\e\e[A" }
-  - { key: Up, mods: Alt|Shift, chars: "\e\e[A" }
-  - { key: Key0, mods: Alt, chars: "\e0" }
-  - { key: Key1, mods: Alt, chars: "\e1" }
-  - { key: Key2, mods: Alt, chars: "\e2" }
-  - { key: Key3, mods: Alt, chars: "\e3" }
-  - { key: Key4, mods: Alt, chars: "\e4" }
-  - { key: Key5, mods: Alt, chars: "\e5" }
-  - { key: Key6, mods: Alt, chars: "\e6" }
-  - { key: Key7, mods: Alt, chars: "\e7" }
-  - { key: Key8, mods: Alt, chars: "\e8" }
-  - { key: Key9, mods: Alt, chars: "\e9" }
+  - {key: Left, mods: Alt, chars: "\eb"}
+  - {key: Left, mods: Alt|Shift, chars: "\e\e[D"}
+  - {key: Right, mods: Alt, chars: "\ef"}
+  - {key: Right, mods: Alt|Shift, chars: "\e\e[C"}
+  - {key: Down, mods: Alt, chars: "\e\e[B"}
+  - {key: Down, mods: Alt|Shift, chars: "\e\e[B"}
+  - {key: Up, mods: Alt, chars: "\e\e[A"}
+  - {key: Up, mods: Alt|Shift, chars: "\e\e[A"}
+  - {key: Key0, mods: Alt, chars: "\e0"}
+  - {key: Key1, mods: Alt, chars: "\e1"}
+  - {key: Key2, mods: Alt, chars: "\e2"}
+  - {key: Key3, mods: Alt, chars: "\e3"}
+  - {key: Key4, mods: Alt, chars: "\e4"}
+  - {key: Key5, mods: Alt, chars: "\e5"}
+  - {key: Key6, mods: Alt, chars: "\e6"}
+  - {key: Key7, mods: Alt, chars: "\e7"}
+  - {key: Key8, mods: Alt, chars: "\e8"}
+  - {key: Key9, mods: Alt, chars: "\e9"}
 
 mouse:
   hide_when_typing: true
@@ -133,4 +127,4 @@ selection:
   save_to_clipboard: true
 
 shell:
-    program: /Users/jm/.config/alacritty/startup.sh
+  program: /Users/jm/.config/alacritty/startup.sh
