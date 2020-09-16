@@ -162,3 +162,5 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 #if ! { [ -n "$TMUX" ]; } then
 #    tmux -L C_b -f $HOME/.config/tmux/prefix_C-b.conf new -A -s outer
 #fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
