@@ -51,3 +51,5 @@ unset __conda_setup
 if [ -f $HOME/.bash_prompt.bash ]; then
     source $HOME/.bash_prompt.bash
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
