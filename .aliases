@@ -5,9 +5,10 @@ alias cfg='config'
 
 # Edit config files
 alias cfg-alacritty="ed $HOME/.config/alacritty/alacritty.yml"
+alias cfg-alacritty-colors="alacritty-colorscheme"
 alias cfg-aliases="ed $HOME/.aliases"
 alias cfg-tmux="ed $HOME/.config/tmux/base.conf"
-alias cfg-vim="ed $HOME/.config/vim/vimrc"
+alias cfg-vim="ed $HOME/.vim/vimrc"
 
 
 # Functions
@@ -66,5 +67,10 @@ alias pew="$CONDA/bin/papers-export --path $HOME/Papers web"
 alias pipdf="$CONDA/bin/papers-import --path $HOME/Papers pdf"
 
 
-# fabrq
+# Etc
+alias hn="$CONDA/bin/haxor-news"
+alias tw="$CONDA/bin/rainbowstream"
+alias rd="$CONDA/bin/tuir"
+alias mdl="mdless --no-color --width=80 "
 alias fabrq="$CONDA/bin/fabrq"
+
