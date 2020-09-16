@@ -46,7 +46,7 @@ mosh-tmux() {
 md() {
     url=$1
     title=${@:2}
-    outputDir="$HOME/Notes/web"
+    outputDir="$HOME/notes/web"
     ymd=$(date +"%Y-%m-%d")
     outputFile="${outputDir}/${ymd} ${title}.md"
     curl --progress-bar --data-urlencode "u=${url}" --data "read=1&md=1" http://heckyesmarkdown.com/go/ -o $outputFile
@@ -58,7 +58,7 @@ md() {
 pdf() {
     url=$1
     title=${@:2}
-    outputDir="$HOME/Notes/web"
+    outputDir="$HOME/notes/web"
     ymd=$(date +"%Y-%m-%d")
     outputFile="${outputDir}/${ymd} ${title}.pdf"
     wkhtmltopdf $url $outputFile
