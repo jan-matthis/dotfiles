@@ -1,7 +1,8 @@
 " === options ==================================================================
 
-source $VIMRUNTIME/defaults.vim " sensible defaults
+source $HOME/.vim/defaults.vim " sensible defaults
 set nomodeline " security measure
+set shell=bash
 
 " unicode
 scriptencoding utf-8
@@ -53,10 +54,10 @@ let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 
 " disable arrow keys bindings
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+"noremap <Up> <Nop>
+"noremap <Down> <Nop>
+"noremap <Left> <Nop>
+"noremap <Right> <Nop>
 
 " colon/semicolon
 nmap ; :
@@ -71,9 +72,17 @@ nnoremap <localleader>D "_D
 vnoremap <localleader>d "_d
 
 " scroll wheel single lines
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+"map <ScrollWheelUp> <C-Y>
+"map <ScrollWheelDown> <C-E>
 
+map <S-Left> ^
+map <S-Down> }
+map <S-Up> {
+map <S-Right> $
+map <S-h> ^
+map <S-j> }
+map <S-k> {
+map <S-l> $
 
 " --- colors ------------------------------------------------------------------
 
@@ -130,6 +139,8 @@ Plug 'https://github.com/zhou13/vim-easyescape'
 Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'https://github.com/matze/vim-move'
 Plug 'https://github.com/airblade/vim-rooter'
+Plug 'https://github.com/Yggdroot/indentLine'
+Plug 'francoiscabrol/ranger.vim'
 
 call plug#end()
 
@@ -275,7 +286,7 @@ let g:vimwiki_list = [{'path': '~/notes/',
 
 " --- vim-move -------------------------------------------------------------
 
-let g:move_key_modifier = 'S' " shift as modifier
+let g:move_key_modifier = 'C' " shift as modifier
 
 
 " --- vim-rooter -----------------------------------------------------------
@@ -288,4 +299,10 @@ let g:rooter_silent_chdir = 1
 " --- status line ----------------------------------------------------------
 
 let laststatus=0
+
+
+" --- indent line ----------------------------------------------------------
+
+"let g:indentLine_leadingSpaceChar='·'
+"let g:indentLine_leadingSpaceEnabled='1'
 

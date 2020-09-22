@@ -1,13 +1,22 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     //
+    // NeoVim
+    //
+    {
+        "command": "vscode-neovim.compositeEscape1",
+        "key": "j",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "j"
+    },
+    //
     // Saving
     //
     {
         "key": "cmd+s",
         "command": "multiCommand.sortImportsWhenPythonAndSave",
         "when": "resourceLangId == 'python'"
-    }
+    },
     //
     // REPL
     //

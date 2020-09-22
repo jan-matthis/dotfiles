@@ -2,8 +2,18 @@
     //
     // General
     //
+    // Telemetry
+    "update.mode": "none",
+    "extensions.autoupdate": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.enableExperiments": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "code-runner.enableAppInsights": false,
     // Window
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     // Workbench
     "workbench.tree.indent": 30,
     "workbench.startupEditor": "newUntitledFile",
@@ -108,4 +118,5 @@
     ],
     // ETC
     "atomKeymap.promptV3Features": true,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
 }
