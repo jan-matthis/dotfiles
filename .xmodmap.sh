@@ -3,7 +3,7 @@
 if command -v xmodmap &> /dev/null
 then
   # Escape via right super
-  xmodmap -e 'keysym Super_R = Escape'
+  xmodmap -e 'keycode 134 = Escape'
 
   # Umlaut through capslock
   xmodmap -e "keycode 66 = Mode_switch NoSymbol Mode_switch"
