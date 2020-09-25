@@ -8,7 +8,7 @@ BACKGROUND=default
 FOREGROUND="#939393"
 HIGHLIGHT="#ffffff"
 ACTIVITY="#a0d0f0"
-PANE_BORDER="#cccccc"
+PANE_BORDER="#939393"
 
 # Title
 set -g set-titles on

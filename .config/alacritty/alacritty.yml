@@ -11,7 +11,7 @@ scrolling:
   multiplier: 1
 
 font:
-  size: 24
+  size: 16
 
   normal:
     family: JetBrains Mono
@@ -36,32 +36,32 @@ cursor:
 
 # Colors (lovelace)
 colors:
-  # COLORSCHEME: light_quiet_mod.yaml
-  # Default Colors
+  # COLORSCHEME: dark_thelovelace.yaml
+  # Default colors
   primary:
-    background: '#f5f5f5'
-    foreground: '#333333'
-  # Normal colors 
+    background: '0x1D1F28'
+    foreground: '0xFDFDFD'
+
+  # Normal colors
   normal:
   # Bright colors
-    black: '#333333'    # 0
-    red: '#aa3731'      # 1
-    green: '#448c27'    # 2
-    yellow: '#cd9731'   # 3
-    blue: '#4b69c6'     # 4
-    magenta: '#a342bd'  # 5
-    cyan: '#4ec1e5'     # 6
-    white: '#aaaaaa'    # 7
-  # Bright colors
+    black: '0x282A36'
+    red: '0xF37F97'
+    green: '0x5ADECD'
+    yellow: '0xF2A272'
+    blue: '0x8897F4'
+    magenta: '0xC574DD'
+    cyan: '0x79E6F3'
+    white: '0xFDFDFD'
   bright:
-    black: '#888888'    # 8
-    red: '#e84b43'      # 9
-    green: '#41a946'    # 10
-    yellow: '#eab700'   # 11
-    blue: '#3279f1'     # 12
-    magenta: '#d340fa'  # 13
-    cyan: '#2cccff'     # 14
-    white: '#feffff'    # 15
+    black: '0x414458'
+    red: '0xFF4971'
+    green: '0x18E3C8'
+    yellow: '0xEBCB8B'
+    blue: '0xFF8037'
+    magenta: '0x556FFF'
+    cyan: '0x3FDCEE'
+    white: '0xBEBEC1'
   cursor:
     text: '#1E1E3F'
     cursor: '#FAD000'
