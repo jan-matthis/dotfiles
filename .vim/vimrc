@@ -86,8 +86,20 @@ map <S-l> $
 
 " --- colors ------------------------------------------------------------------
 
-colorscheme custom
-" exec "source " . expand('<sfile>:p:h') . "/colors/custom.vim"
+" colorscheme 
+if !empty($VIM_COLORSCHEME)
+    colorscheme $VIM_COLORSCHEME
+else
+    colorscheme custom
+endif
+
+" background
+" https://vi.stackexchange.com/questions/12104/what-does-set-background-dark-do
+if !empty($VIM_BACKGROUND)
+    set background=$VIM_BACKGROUND
+else
+    set background=light
+endif
 
 
 " --- column limit ------------------------------------------------------------
@@ -143,6 +155,7 @@ Plug 'https://github.com/airblade/vim-rooter'
 Plug 'https://github.com/Yggdroot/indentLine'
 Plug 'https://github.com/francoiscabrol/ranger.vim'
 Plug 'https://github.com/rbgrouleff/bclose.vim'
+Plug 'https://github.com/junegunn/goyo.vim'
 
 call plug#end()
 
@@ -206,6 +219,13 @@ let g:lmap.w = {
 " --- NERDTree ----------------------------------------------------------------
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+
+" --- indentline --------------------------------------------------------------
+
+" https://github.com/vimwiki/vimwiki/issues/312
+let g:indentLine_concealcursor=""
+let g:indentLine_conceallevel=2
 
 
 " --- vim-rainbow -------------------------------------------------------------
