@@ -74,3 +74,10 @@ alias rd="$CONDA/bin/tuir"
 alias mdl="mdless --no-color --width=80 "
 alias fabrq="$CONDA/bin/fabrq"
 
+
+# macOS
+alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
+
+
+# Anki
+alias aup="python $HOME/notes/memo/obsidian_to_anki.py -u $HOME/notes/memo"
