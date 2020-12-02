@@ -72,7 +72,6 @@ alias hn="$CONDA/bin/haxor-news"
 alias tw="$CONDA/bin/rainbowstream"
 alias rd="$CONDA/bin/tuir"
 alias mdl="mdless --no-color --width=80 "
-alias fabrq="$CONDA/bin/fabrq"
 
 
 # macOS
