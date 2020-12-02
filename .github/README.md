@@ -5,6 +5,14 @@ Managed in a [bare Git repository](https://www.atlassian.com/git/tutorials/dotfi
 
 ## Installation
 
+### Automatic
+
+```commandtext
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jan-matthis/dotfiles/HEAD/.install-dotfiles.sh)"
+```
+
+### Manual
+
 ```commandtext
 git clone --bare git@github.com:jan-matthis/dotfiles.git $HOME/.cfg
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
