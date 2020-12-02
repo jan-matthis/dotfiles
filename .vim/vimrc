@@ -1,4 +1,4 @@
-" === options ==================================================================
+" === general  ==================================================================
 
 source $HOME/.vim/defaults.vim " sensible defaults
 set nomodeline " security measure
@@ -28,6 +28,11 @@ set clipboard^=unnamed,unnamedplus
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
+" provides tab-completion for all file-related tasks
+set path+=**
+
+" display all matching files on tab-complete
+set wildmenu
 
 " --- tabs/indent -------------------------------------------------------------
 
@@ -115,6 +120,16 @@ augroup columnLimit
         \ let w:m1=matchadd('ColumnLimit', pattern, -1)
 augroup END
 
+" --- file browsing -----------------------------------------------------------
+
+" :edit to open
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
 
 " --- vim-plug ----------------------------------------------------------------
 
@@ -133,13 +148,13 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/preservim/nerdtree'
+"Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/preservim/nerdcommenter'
 Plug 'https://github.com/dense-analysis/ale'
 Plug 'https://github.com/AndrewRadev/splitjoin.vim'
 Plug 'https://github.com/airblade/vim-gitgutter'
-Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'https://github.com/junegunn/fzf.vim'
+#Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+#Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/mileszs/ack.vim'
 Plug 'https://github.com/junegunn/vim-easy-align'
 Plug 'https://github.com/jeffkreeftmeijer/vim-numbertoggle'
@@ -149,7 +164,7 @@ Plug 'https://github.com/frazrepo/vim-rainbow'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/maralla/completor.vim'
 Plug 'https://github.com/zhou13/vim-easyescape'
-Plug 'https://github.com/alok/notational-fzf-vim'
+#Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'https://github.com/matze/vim-move'
 Plug 'https://github.com/airblade/vim-rooter'
 Plug 'https://github.com/Yggdroot/indentLine'
@@ -292,7 +307,7 @@ autocmd VimEnter * :highlight! ALEInfo   ctermfg=14 ctermbg=NONE
 
 " --- easyescape --------------------------------------------------------------
 
-" exit insert mode through pressing jj twice
+" exit insert mode through pressing kj or jk
 let g:easyescape_chars = { "j": 2 }
 let g:easyescape_timeout = 500
 cnoremap jj <ESC>
