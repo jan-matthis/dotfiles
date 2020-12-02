@@ -14,20 +14,20 @@ font:
   size: 16
 
   normal:
-    family: JetBrains Mono
-    style: Semi Light
+    family: SF Mono
+    style: Regular
 
   bold:
-    family: JetBrains Mono
+    family: SF Mono
     style: Bold
 
   italic:
-    family: JetBrains Mono
+    family: SF Mono
     style: Italic
 
   offset:
     x: 0
-    y: 4
+    y: 6
 
 draw_bold_text_with_bright_colors: false
 
@@ -36,87 +36,96 @@ cursor:
 
 # Colors (lovelace)
 colors:
-  # COLORSCHEME: light_quiet_mod.yaml
-  # Default Colors
+  # Default colors
   primary:
-    background: '#f5f5f5'
-    foreground: '#333333'
-  # Normal colors 
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
   normal:
-  # Bright colors
-    black: '#333333'    # 0
-    red: '#aa3731'      # 1
-    green: '#448c27'    # 2
-    yellow: '#cd9731'   # 3
-    blue: '#4b69c6'     # 4
-    magenta: '#a342bd'  # 5
-    cyan: '#4ec1e5'     # 6
-    white: '#aaaaaa'    # 7
+    black: '#000000'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#caa9fa'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#bfbfbf'
+
   # Bright colors
   bright:
-    black: '#888888'    # 8
-    red: '#e84b43'      # 9
-    green: '#41a946'    # 10
-    yellow: '#eab700'   # 11
-    blue: '#3279f1'     # 12
-    magenta: '#d340fa'  # 13
-    cyan: '#2cccff'     # 14
-    white: '#feffff'    # 15
-  cursor:
-    text: '#1E1E3F'
-    cursor: '#FAD000'
-
-    # Normal colors
-  selection:
-    background: '#c1deff'
-    text: '#000000'
-  indexed_colors: []
+    black: '#575b70'
+    red: '#ff6e67'
+    green: '#5af78e'
+    yellow: '#f4f99d'
+    blue: '#caa9fa'
+    magenta: '#ff92d0'
+    cyan: '#9aedfe'
+    white: '#e6e6e6'
 key_bindings:
-  - {key: Comma, mods: Control, command: {program: vi, args: [$HOME/.config/alacritty/alacritty.yml]}}
-  - {key: N, mods: Control, action: SpawnNewInstance}
-  - {key: Left, mods: Control, chars: "\eb"}
+  - {
+      key: Comma,
+      mods: Control,
+      command:
+        {
+          program: vi,
+          args: [ $HOME/.config/alacritty/alacritty.yml ]
+        }
+    }
+  - { key: N, mods: Control, action: SpawnNewInstance }
+  - { key: Left, mods: Control, chars: "\eb" }
   # one word left
-  - {key: Right, mods: Control, chars: "\ef"}
+  - { key: Right, mods: Control, chars: "\ef" }
   # one word right
-  - {key: Left, mods: Control, chars: "\eOH", mode: AppCursor}
+  - {
+      key: Left,
+      mods: Control,
+      chars: "\eOH",
+      mode: AppCursor
+    }
   # home
-  - {key: Right, mods: Control, chars: "\eOF", mode: AppCursor}
+  - {
+      key: Right,
+      mods: Control,
+      chars: "\eOF",
+      mode: AppCursor
+    }
   # end
-  - {key: Up, mods: Control, chars: "\e[1;5A"}
-  - {key: Down, mods: Control, chars: "\e[1;5B"}
-  - {key: 28, mods: Control, chars: '{'}
-  - {key: 25, mods: Control, chars: '}'}
-  - {key: 37, mods: Control, chars: '@'}
-  - {key: 26, mods: Control|Shift, chars: \}
-  - {key: 26, mods: Control, chars: '|'}
-  - {key: 45, mods: Control, chars: '~'}
-  - {key: 23, mods: Control, chars: '['}
-  - {key: 22, mods: Control, chars: ']'}
-  - {key: F, mods: Control, action: ToggleSimpleFullscreen}
-  - {key: Equals, mods: Control, action: IncreaseFontSize}
-  - {key: Minus, mods: Control, action: DecreaseFontSize}
-  - {key: V, mods: Command, action: Paste}
-  - {key: V, mods: Control, action: Paste}
-  - {key: C, mods: Command, action: Copy}   #
+  - { key: Up, mods: Control, chars: "\e[1;5A" }
+  - { key: Down, mods: Control, chars: "\e[1;5B" }
+  - { key: 28, mods: Control, chars: '{' }
+  - { key: 25, mods: Control, chars: '}' }
+  - { key: 37, mods: Control, chars: '@' }
+  - { key: 26, mods: Control|Shift, chars: \ }
+  - { key: 26, mods: Control, chars: '|' }
+  - { key: 45, mods: Control, chars: '~' }
+  - { key: 23, mods: Control, chars: '[' }
+  - { key: 22, mods: Control, chars: ']' }
+  - { key: F, mods: Control, action: ToggleSimpleFullscreen }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: V, mods: Command, action: Paste }
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Command, action: Copy }
   #- {key: C, mods: Control, action: Copy }  # Used to cancel exec
-  - {key: Left, mods: Alt, chars: "\eb"}
-  - {key: Left, mods: Alt|Shift, chars: "\e\e[D"}
-  - {key: Right, mods: Alt, chars: "\ef"}
-  - {key: Right, mods: Alt|Shift, chars: "\e\e[C"}
-  - {key: Down, mods: Alt, chars: "\e\e[B"}
-  - {key: Down, mods: Alt|Shift, chars: "\e\e[B"}
-  - {key: Up, mods: Alt, chars: "\e\e[A"}
-  - {key: Up, mods: Alt|Shift, chars: "\e\e[A"}
-  - {key: Key0, mods: Alt, chars: "\e0"}
-  - {key: Key1, mods: Alt, chars: "\e1"}
-  - {key: Key2, mods: Alt, chars: "\e2"}
-  - {key: Key3, mods: Alt, chars: "\e3"}
-  - {key: Key4, mods: Alt, chars: "\e4"}
-  - {key: Key5, mods: Alt, chars: "\e5"}
-  - {key: Key6, mods: Alt, chars: "\e6"}
-  - {key: Key7, mods: Alt, chars: "\e7"}
-  - {key: Key8, mods: Alt, chars: "\e8"}
-  - {key: Key9, mods: Alt, chars: "\e9"}
+  - { key: Left, mods: Alt, chars: "\eb" }
+  - { key: Left, mods: Alt|Shift, chars: "\e\e[D" }
+  - { key: Right, mods: Alt, chars: "\ef" }
+  - { key: Right, mods: Alt|Shift, chars: "\e\e[C" }
+  - { key: Down, mods: Alt, chars: "\e\e[B" }
+  - { key: Down, mods: Alt|Shift, chars: "\e\e[B" }
+  - { key: Up, mods: Alt, chars: "\e\e[A" }
+  - { key: Up, mods: Alt|Shift, chars: "\e\e[A" }
+  - { key: Key0, mods: Alt, chars: "\e0" }
+  - { key: Key1, mods: Alt, chars: "\e1" }
+  - { key: Key2, mods: Alt, chars: "\e2" }
+  - { key: Key3, mods: Alt, chars: "\e3" }
+  - { key: Key4, mods: Alt, chars: "\e4" }
+  - { key: Key5, mods: Alt, chars: "\e5" }
+  - { key: Key6, mods: Alt, chars: "\e6" }
+  - { key: Key7, mods: Alt, chars: "\e7" }
+  - { key: Key8, mods: Alt, chars: "\e8" }
+  - { key: Key9, mods: Alt, chars: "\e9" }
 
 mouse:
   hide_when_typing: true
