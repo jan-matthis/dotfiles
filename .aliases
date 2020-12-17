@@ -17,7 +17,8 @@ alias t="ssh-tmux"
 
 
 # Tmux
-alias tt="tmux new -A -s main"
+alias tn="tmux new -A -s main"
+alias td="tmux detach-client -a"
 
 
 # Disk space
